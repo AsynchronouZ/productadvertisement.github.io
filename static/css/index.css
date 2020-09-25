@@ -237,6 +237,9 @@ header svg {
   padding: 20px 0px;
   cursor: pointer;
 }
+.circles-container img {
+  height: 100%;
+}
 .circles-container h1,
 .circles-container h2 {
   font-weight: 300;
