@@ -107,23 +107,11 @@ header {
       }
    }
 
-   @media only screen and (max-width: 576px) {
-      h1 a {
-         font-size: 3rem;
-      }
-   }
-
    ul {
       width: 15%;
       list-style: none;
       display: flex;
       justify-content: space-between;
-   }
-
-   @media only screen and (max-width: 1200px) {
-      ul {
-         width: 18%;
-      }
    }
 
    ul li ul {
@@ -138,13 +126,29 @@ header {
       display: none;
    }
 
+   @media only screen and (max-width: 1200px) {
+      ul {
+         width: 18%;
+      }
+   }
+
    @media only screen and (max-width: 992px) {
+      h1 a {
+         font-size: 4rem;
+      }
+
       svg {
          display: block;
       }
 
       ul {
          display: none;
+      }
+   }
+
+   @media only screen and (max-width: 576px) {
+      h1 a {
+         font-size: 3rem;
       }
    }
 }
