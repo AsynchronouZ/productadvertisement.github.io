@@ -119,7 +119,7 @@ header svg {
 }
 @media only screen and (max-width: 992px) {
   header h1 a {
-    font-size: 4rem;
+    font-size: 5rem;
   }
   header svg {
     display: block;
