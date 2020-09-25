@@ -140,6 +140,7 @@ header svg {
   position: relative;
 }
 .landing-section img {
+  content-visibility: auto;
   position: absolute;
   top: 30%;
   left: 50%;
