@@ -109,7 +109,7 @@ header {
 
    @media only screen and (max-width: 576px) {
       h1 a {
-         font-size: 4rem;
+         font-size: 3rem;
       }
    }
 
@@ -131,6 +131,7 @@ header {
    }
 
    svg {
+      cursor: pointer;
       width: 30px;
       height: auto;
       fill: white;
