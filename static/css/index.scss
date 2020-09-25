@@ -159,7 +159,6 @@ header {
    position: relative;
 
    img {
-      content-visibility: auto;
       position: absolute;
       top: 30%;
       left: 50%;
@@ -221,7 +220,6 @@ header {
       box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5),
          -2px -5px 5px rgba(0, 0, 0, 0.5);
       text-align: center;
-      content-visivility: auto;
    }
 
    .img-container {
@@ -230,7 +228,6 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
-      content-visivility: auto;
    }
 
    img {
