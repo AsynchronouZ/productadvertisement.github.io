@@ -1,0 +1,250 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+label,
+span {
+  color: #f4f4f4;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.radial-bg {
+  background: radial-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95));
+}
+
+.divider {
+  width: 100%;
+  background: #323232;
+}
+.divider > div {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  padding: 40px 0px 40px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around !important;
+}
+
+header {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+}
+header nav {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
+}
+header li {
+  cursor: pointer;
+}
+header a {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 200;
+  padding: 10px;
+  border-radius: 5px;
+}
+header a:hover, header a:focus {
+  transition: all 200ms ease-out;
+  background: #00a3ff;
+  text-shadow: 0px 2px 2px black;
+}
+header h1 a {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 6rem;
+}
+header h1 a:hover, header h1 a:focus {
+  transition: none;
+  background: none;
+  text-shadow: none;
+}
+@media only screen and (max-width: 576px) {
+  header h1 a {
+    font-size: 4rem;
+  }
+}
+header ul {
+  width: 15%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1200px) {
+  header ul {
+    width: 18%;
+  }
+}
+header ul li ul {
+  display: none;
+}
+header svg {
+  width: 30px;
+  height: auto;
+  fill: white;
+  display: none;
+}
+@media only screen and (max-width: 992px) {
+  header svg {
+    display: block;
+  }
+  header ul {
+    display: none;
+  }
+}
+
+.landing-section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.landing-section img {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translatex(-50%);
+  height: 80%;
+}
+.landing-section svg {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translatex(-50%);
+  height: 20px;
+  fill: none;
+  stroke-width: 25px;
+  stroke: white;
+}
+
+.specs {
+  margin: 30px 10px;
+  height: auto;
+  text-align: center;
+  word-wrap: break-word;
+  width: 300px;
+}
+.specs h2,
+.specs p {
+  font-family: "Montserrat", sans-serif;
+}
+.specs h2 {
+  font-size: 3rem;
+  color: #00a3ff;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.specs p {
+  color: #b8b8b8;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.cards-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cards-container .cards {
+  height: auto;
+  width: 330px;
+  padding-bottom: 40px;
+  border-radius: 20px;
+  background: transparent;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5), -2px -5px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.cards-container .img-container {
+  height: 300px;
+  width: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards-container img {
+  height: 80%;
+}
+.cards-container h2 {
+  color: #f4f4f4;
+  margin-bottom: 10px;
+}
+.cards-container label,
+.cards-container span {
+  color: #b8b8b8;
+}
+
+.directors {
+  justify-content: space-around;
+}
+.directors a {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.directors a:hover, .directors a:focus {
+  transition: all 200ms ease-out;
+  box-shadow: 1px 2px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.circles-container {
+  text-align: center;
+  width: 300px;
+  margin: 30px 10px;
+  padding: 20px 0px;
+  cursor: pointer;
+}
+.circles-container h1,
+.circles-container h2 {
+  font-weight: 300;
+}
+.circles-container h2 {
+  color: #b8b8b8;
+}
+.circles-container .circle {
+  height: 200px;
+  width: 200px;
+  background: transparent;
+  border: 10px solid #00a3ff;
+  border-radius: 50%;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=index.css.map */

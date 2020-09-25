@@ -1,0 +1,283 @@
+@use "variables" as var;
+
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+*:focus {
+   outline: none;
+}
+
+html {
+   height: 100%;
+   font-size: 62.5%;
+}
+
+body {
+   font-size: 1.6rem;
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+}
+
+a {
+   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+label,
+span {
+   color: var.$white-card;
+   font-family: "Montserrat", sans-serif;
+   font-weight: 400;
+}
+
+.radial-bg {
+   background: radial-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95));
+}
+
+.divider {
+   width: 100%;
+   background: var.$divider;
+
+   & > div {
+      width: 80%;
+      height: 100%;
+      margin: auto;
+      padding: 40px 0px 40px 0px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around !important;
+   }
+}
+
+header {
+   position: absolute;
+   z-index: 100;
+   width: 100%;
+   top: 0;
+
+   nav {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 70px;
+   }
+
+   li {
+      cursor: pointer;
+   }
+
+   a {
+      color: var.$white;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.8rem;
+      font-weight: 200;
+      padding: 10px;
+      border-radius: 5px;
+
+      &:hover,
+      &:focus {
+         transition: all 200ms ease-out;
+         background: var.$blue;
+         text-shadow: 0px 2px 2px black;
+      }
+   }
+
+   h1 a {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+      font-size: 6rem;
+
+      &:hover,
+      &:focus {
+         transition: none;
+         background: none;
+         text-shadow: none;
+      }
+   }
+
+   @media only screen and (max-width: 576px) {
+      h1 a {
+         font-size: 4rem;
+      }
+   }
+
+   ul {
+      width: 15%;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   @media only screen and (max-width: 1200px) {
+      ul {
+         width: 18%;
+      }
+   }
+
+   ul li ul {
+      display: none;
+   }
+
+   svg {
+      width: 30px;
+      height: auto;
+      fill: white;
+      display: none;
+   }
+
+   @media only screen and (max-width: 992px) {
+      svg {
+         display: block;
+      }
+
+      ul {
+         display: none;
+      }
+   }
+}
+
+.landing-section {
+   height: 100vh;
+   width: 100%;
+   position: relative;
+
+   img {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translatex(-50%);
+      height: 80%;
+   }
+
+   svg {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translatex(-50%);
+      height: 20px;
+      fill: none;
+      stroke-width: 25px;
+      stroke: white;
+   }
+}
+
+.specs {
+   margin: 30px 10px;
+   height: auto;
+   text-align: center;
+   word-wrap: break-word;
+   width: 300px;
+
+   h2,
+   p {
+      font-family: "Montserrat", sans-serif;
+   }
+
+   h2 {
+      font-size: 3rem;
+      color: var.$blue;
+      font-weight: 400;
+      margin-bottom: 10px;
+   }
+
+   p {
+      color: var.$gray;
+      font-weight: 400;
+      font-size: 2rem;
+   }
+}
+
+.cards-container {
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+
+   .cards {
+      height: auto;
+      width: 330px;
+      padding-bottom: 40px;
+      border-radius: 20px;
+      background: transparent;
+      box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5),
+         -2px -5px 5px rgba(0, 0, 0, 0.5);
+      text-align: center;
+   }
+
+   .img-container {
+      height: 300px;
+      width: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   img {
+      height: 80%;
+   }
+
+   h2 {
+      color: var.$white-card;
+      margin-bottom: 10px;
+   }
+
+   label,
+   span {
+      color: var.$gray;
+   }
+}
+
+.directors {
+   justify-content: space-around;
+
+   a {
+      border-radius: 20px;
+      overflow: hidden;
+
+      &:hover,
+      &:focus {
+         transition: all 200ms ease-out;
+         box-shadow: 1px 2px 10px 5px rgba(0, 0, 0, 0.2);
+      }
+   }
+}
+
+.circles-container {
+   text-align: center;
+   width: 300px;
+   margin: 30px 10px;
+   padding: 20px 0px;
+   cursor: pointer;
+
+   h1,
+   h2 {
+      font-weight: 300;
+   }
+
+   h2 {
+      color: var.$gray;
+   }
+
+   .circle {
+      height: 200px;
+      width: 200px;
+      background: transparent;
+      border: 10px solid var.$blue;
+      border-radius: 50%;
+      margin: 30px auto;
+      overflow: hidden;
+   }
+}
