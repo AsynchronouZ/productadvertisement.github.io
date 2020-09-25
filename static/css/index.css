@@ -195,6 +195,7 @@ header svg {
   background: transparent;
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5), -2px -5px 5px rgba(0, 0, 0, 0.5);
   text-align: center;
+  content-visivility: auto;
 }
 .cards-container .img-container {
   height: 300px;
@@ -202,6 +203,7 @@ header svg {
   display: flex;
   justify-content: center;
   align-items: center;
+  content-visivility: auto;
 }
 .cards-container img {
   height: 80%;
