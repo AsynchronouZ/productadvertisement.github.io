@@ -14,7 +14,7 @@
 
 html {
    height: 100%;
-   font-size: 62.5%;
+   font-size: 10px;
 }
 
 body {
@@ -22,6 +22,35 @@ body {
    display: flex;
    flex-direction: column;
    min-height: 100%;
+   overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+   width: 12px;
+   background: var.$divider-s;
+}
+
+::-webkit-scrollbar-thumb {
+   background: var.$divider-t;
+
+   &:hover {
+      background: var.$divider-t2;
+   }
+
+   &:active {
+      background: var.$divider-t3;
+   }
+}
+
+::-webkit-scrollbar-tracka {
+   background: var.$gray;
+}
+
+header,
+main,
+footer {
+   font-family: "Montserrat", sans-serif;
+   overflow: hidden;
 }
 
 a {
@@ -40,7 +69,38 @@ span {
    font-weight: 400;
 }
 
+footer {
+   min-height: 100px;
+   background: var.$divider;
+   margin-top: auto;
+
+   .social-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 150px;
+      height: 50px;
+      margin: auto;
+   }
+
+   svg {
+      fill: var.$white-card;
+      height: 20px;
+      width: 30px;
+      display: block;
+
+      &:hover {
+         fill: var.$blue-l;
+      }
+   }
+   p {
+      color: var.$white-card;
+      text-align: center;
+   }
+}
+
 .radial-bg {
+   height: auto;
    background: radial-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95));
 }
 
@@ -291,5 +351,62 @@ header {
       border-radius: 50%;
       margin: 30px auto;
       overflow: hidden;
+   }
+}
+
+@media only screen and (max-width: 1200px) {
+   .circles-container {
+      width: 250px;
+      padding: 10px 0px;
+
+      .circle {
+         margin: 10px auto;
+         height: 150px;
+         width: 150px;
+         border: 7px solid var.$blue;
+      }
+   }
+}
+
+.feedback {
+   text-align: center;
+   padding-bottom: 50px;
+
+   h2 {
+      font-weight: 200;
+      font-style: italic;
+      color: var.$gray;
+   }
+
+   div {
+      height: 400px;
+      width: 70%;
+      max-width: 500px;
+      padding: 20px 0;
+      margin: 30px auto;
+      display: flex;
+   }
+
+   aside {
+      padding: 100px 20px;
+      width: 30%;
+      height: 100%;
+      background: var.$divider;
+   }
+
+   section {
+      width: 70%;
+      height: 100%;
+      background: var.$white-card;
+   }
+
+   @media only screen and (max-width: 768px) {
+      aside {
+         display: none;
+      }
+
+      section {
+         width: 100%;
+      }
    }
 }
